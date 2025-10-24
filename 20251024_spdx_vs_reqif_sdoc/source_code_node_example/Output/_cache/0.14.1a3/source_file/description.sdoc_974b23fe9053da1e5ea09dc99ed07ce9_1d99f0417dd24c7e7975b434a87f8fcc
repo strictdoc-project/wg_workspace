@@ -1,0 +1,248 @@
+ccopy_reg
+_reconstructor
+p0
+(cstrictdoc.backend.sdoc_source_code.models.source_file_info
+SourceFileTraceabilityInfo
+p1
+c__builtin__
+object
+p2
+Ntp3
+Rp4
+(dp5
+Vg_parts
+p6
+(lp7
+V[DOCUMENT]\u000a
+p8
+aVMID: c2d4542d5f1741c88dfcb4f68ad7dcbd\u000a
+p9
+aVTITLE: Test specification\u000a
+p10
+aVUID: TEST_DOC\u000a
+p11
+aV\u000a
+p12
+aV[GRAMMAR]\u000a
+p13
+aVELEMENTS:\u000a
+p14
+aV- TAG: SECTION\u000a
+p15
+aV  PROPERTIES:\u000a
+p16
+aV    IS_COMPOSITE: True\u000a
+p17
+aV  FIELDS:\u000a
+p18
+aV  - TITLE: UID\u000a
+p19
+aV    TYPE: String\u000a
+p20
+aV    REQUIRED: False\u000a
+p21
+aV  - TITLE: TITLE\u000a
+p22
+aV    TYPE: String\u000a
+p23
+aV    REQUIRED: True\u000a
+p24
+aV- TAG: TEST_SPEC\u000a
+p25
+aV  PROPERTIES:\u000a
+p26
+aV    VIEW_STYLE: Narrative\u000a
+p27
+aV  FIELDS:\u000a
+p28
+aV  - TITLE: UID\u000a
+p29
+aV    TYPE: String\u000a
+p30
+aV    REQUIRED: False\u000a
+p31
+aV  - TITLE: TITLE\u000a
+p32
+aV    TYPE: String\u000a
+p33
+aV    REQUIRED: True\u000a
+p34
+aV  - TITLE: INTENTION\u000a
+p35
+aV    TYPE: String\u000a
+p36
+aV    REQUIRED: False\u000a
+p37
+aV  - TITLE: INPUT\u000a
+p38
+aV    TYPE: String\u000a
+p39
+aV    REQUIRED: False\u000a
+p40
+aV  - TITLE: EXPECTED_RESULTS\u000a
+p41
+aV    TYPE: String\u000a
+p42
+aV    REQUIRED: False\u000a
+p43
+aV  RELATIONS:\u000a
+p44
+aV  - TYPE: Parent\u000a
+p45
+aV  - TYPE: File\u000a
+p46
+asV_tx_position
+p47
+I0
+sV_tx_position_end
+p48
+I671
+sV_tx_filename
+p49
+V/Users/Stanislaw/workspace/projects/strictdoc-project/strictdoc/tests/integration/features/source_code_traceability/_source_nodes/02_function_with_source_node/description.sdoc
+p50
+sV_tx_metamodel
+p51
+NsV_tx_model_params
+p52
+NsV_tx_parser
+p53
+NsVsource_file
+p54
+NsVsource_nodes
+p55
+(lp56
+sVfunctions
+p57
+(lp58
+sVng_map_reqs_to_markers
+p59
+(dp60
+sVng_map_names_to_markers
+p61
+(dp62
+sVng_map_names_to_definition_functions
+p63
+(dp64
+sVmerged_ranges
+p65
+(lp66
+sVfile_stats
+p67
+g0
+(cstrictdoc.helpers.file_stats
+SourceFileStats
+p68
+g2
+Ntp69
+Rp70
+(dp71
+Vlines_total
+p72
+I39
+sVlines_non_empty
+p73
+I38
+sVlines_empty
+p74
+I1
+sVlines_info
+p75
+(dp76
+I1
+I01
+sI2
+I01
+sI3
+I01
+sI4
+I01
+sI5
+I00
+sI6
+I01
+sI7
+I01
+sI8
+I01
+sI9
+I01
+sI10
+I01
+sI11
+I01
+sI12
+I01
+sI13
+I01
+sI14
+I01
+sI15
+I01
+sI16
+I01
+sI17
+I01
+sI18
+I01
+sI19
+I01
+sI20
+I01
+sI21
+I01
+sI22
+I01
+sI23
+I01
+sI24
+I01
+sI25
+I01
+sI26
+I01
+sI27
+I01
+sI28
+I01
+sI29
+I01
+sI30
+I01
+sI31
+I01
+sI32
+I01
+sI33
+I01
+sI34
+I01
+sI35
+I01
+sI36
+I01
+sI37
+I01
+sI38
+I01
+sI39
+I01
+ssbsVng_lines_covered
+p77
+I0
+sg75
+(dp78
+sV_coverage
+p79
+I0
+sVcovered_functions
+p80
+I0
+sVmarkers
+p81
+(lp82
+sV_tx_attrs
+p83
+NsV_tx_peg_rule
+p84
+Nsb.

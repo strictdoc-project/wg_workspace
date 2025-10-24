@@ -1,0 +1,1966 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  <meta charset="UTF-8"/>
+  <meta name="keywords" content="strictdoc, documentation, documentation-tool, requirements-management, requirements, documentation-generator, requirement-specifications, requirements-engineering, technical-documentation, requirements-specification"/>
+  <meta name="description" content="strictdoc. Software for technical documentation and requirements management."/>
+  <meta name="strictdoc-export-type" content="static">
+  <meta name="strictdoc-document-level" content="2">
+
+  <link rel="shortcut icon" href="../../../_static/favicon.ico" type="image/x-icon"/>
+
+  
+  
+  <link rel="stylesheet" href="../../../_static/base.css"/>
+  <link rel="stylesheet" href="../../../_static/layout.css"/>
+  <link rel="stylesheet" href="../../../_static/content.css"/>
+  <link rel="stylesheet" href="../../../_static/node.css"/>
+  <link rel="stylesheet" href="../../../_static/node_content.css"/>
+  <link rel="stylesheet" href="../../../_static/element.css"/>
+  <link rel="stylesheet" href="../../../_static/form.css"/>
+  <link rel="stylesheet" href="../../../_static/requirement__temporary.css"/>
+  <link rel="stylesheet" href="../../../_static/autogen.css"/>
+  
+  <link rel="stylesheet" href="../../../_static/source_file_screen.css" />
+  <link rel="stylesheet" href="../../../_static/requirement-tree.css"/>
+
+
+  
+  <script src="../../../_static/source_file_screen.js"></script>
+  
+  
+  
+
+
+  <title>
+  tests/subfolder/file3.c - Source file coverage
+</title>
+
+  
+
+  <style>
+    /* Lexer: C */
+pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.highlight .hll { background-color: #ffffcc }
+.highlight { background: #f8f8f8; }
+.highlight .c { color: #3D7B7B; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #F00 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666 } /* Operator */
+.highlight .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #9C6500 } /* Comment.Preproc */
+.highlight .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
+.highlight .gr { color: #E40000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #008400 } /* Generic.Inserted */
+.highlight .go { color: #717171 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #04D } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #687822 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #00F; font-weight: bold } /* Name.Class */
+.highlight .no { color: #800 } /* Name.Constant */
+.highlight .nd { color: #A2F } /* Name.Decorator */
+.highlight .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #00F } /* Name.Function */
+.highlight .nl { color: #767600 } /* Name.Label */
+.highlight .nn { color: #00F; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #A2F; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #BBB } /* Text.Whitespace */
+.highlight .mb { color: #666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666 } /* Literal.Number.Float */
+.highlight .mh { color: #666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #A45A77 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #00F } /* Name.Function.Magic */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
+.highlight .il { color: #666 } /* Literal.Number.Integer.Long */
+  </style>
+
+</head>
+
+<body data-viewtype="source-file" data-turbo="false">
+
+<div class="mars">
+  
+</div>
+
+  <div class="layout" id="layout">
+
+    <nav class="layout_nav">
+      
+  <div class="nav">
+
+
+
+  <a
+    data-link="index"
+    class="nav_button"
+    href="../../../index.html"
+    title="Project index">
+    <svg class="svg_icon" width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <line x1="9" y1="4" x2="7" y2="4"></line>
+  <line x1="12" y1="9" x2="12" y2="7"></line>
+  <line x1="6" y1="10" x2="10" y2="6"></line>
+  <circle cx="4" cy="12" r="2.25"></circle>
+  <circle cx="12" cy="4" r="2.25"></circle>
+  <circle cx="4" cy="4" r="2.25"></circle>
+  <circle cx="12" cy="12" r="2.25"></circle>
+</svg>
+  </a><a
+    data-link="source_coverage"
+    class="nav_button"
+    href="../../../source_coverage.html"
+    title="Source coverage"
+    data-testid="project-tree-link-source-coverage"
+  >
+    
+<svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <path d="M6,2 C5.5,2 5,2 5,2 C4.5,2 4,2.5 4,3 C4,5 4,6 4,6 C4,6.5 3.5,7.5 2,8 C3.5,8.5 4,9.5 4,10 C4,10 4,11 4,13 C4,13.5 4.5,14 5,14 C5,14 5.5,14 6,14"></path>
+    <line x1="8" y1="8" x2="14" y2="8"></line>
+    <line x1="10" y1="4" x2="14" y2="4"></line>
+    <line x1="10" y1="12" x2="14" y2="12"></line>
+</svg>
+  </a></div>
+
+    </nav><aside class="layout_tree">
+      
+  <div class="source-file__aside">
+  <sdoc-tabs class="in_aside_panel">
+    <sdoc-tab data-testid="source-file-tab-Nodes" active="" style="order: 0;">Nodes</sdoc-tab>
+    <sdoc-tab data-testid="source-file-tab-Ranges" style="order: 1;">Ranges</sdoc-tab>
+  </sdoc-tabs>
+
+  <div class="source-file__refer" id="referContainer">
+  <sdoc-tab-content id="Nodes" active>
+    <div class="source-file__toc"><div class="source-file__toc-node">
+            
+
+
+<div
+  id="requirement:REQ-1"
+  class="source-file__requirement"
+  data-reqid="REQ-1"
+  
+>
+  
+  <div class="source-file__requirement-header">
+    <a
+      class="action_icon secondary"
+      href="../../../02_function_with_source_node/input.html#REQ-1"
+      title="Go to requirement in document"
+    ><svg class="svg_icon" width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M13,8 C13,7.5 12.5,7 12,7 L9,7 C8.5,7 8,6.5 8,6 L8,3 C8,2.5 7.5,2 7,2 L4,2 C3.5,2 3,2.5 3,3 L3,13 C3,13.5 3.5,14 4,14 L6,14" />
+  <line x1="8" y1="12" x2="14" y2="12" stroke-linecap="round"></line>
+  <polyline stroke-linecap="round" points="10 9.5 7.5 12 10 14.5"></polyline>
+  <path d="M13,9 C13,7 13,7 12.5,6.5 C11.5,5.5 10.8,4.8 10.3,4.3 C9.9,3.9 9.3,3.3 8.5,2.5 C8,2 7.5,2 7,2 L6,2" />
+</svg></a>
+    <div class="source-file__requirement-info">
+      <div class="source-file__requirement-uid">REQ-1</div>
+        Requirement Title
+    </div>
+  </div>
+  
+
+ <div class="source-file__requirement-links">
+
+          <a
+            class="source__range-pointer"
+            data-begin="3"
+            data-end="20"
+            data-traceability-file-type="other_file"
+            href="../../../_source_files/tests/file.c.html#REQ-1#3#20"
+            title="lines 3-20 in file tests/file.c"
+          >
+            
+            <b>[ 3-20 ]</b>
+            <span class="source__range-pointer_description">tests/file.c, function test_case_1()</span>
+            
+          </a>
+
+          <a
+            class="source__range-pointer"
+            data-begin="3"
+            data-end="20"
+            data-traceability-file-type="other_file"
+            href="../../../_source_files/tests/file2.c.html#REQ-1#3#20"
+            title="lines 3-20 in file tests/file2.c"
+          >
+            
+            <b>[ 3-20 ]</b>
+            <span class="source__range-pointer_description">tests/file2.c, function test_case_1()</span>
+            
+          </a>
+
+          <a
+            class="source__range-pointer"
+            data-begin="3"
+            data-end="20"
+            data-traceability-file-type="this_file"
+            href="../../../_source_files/tests/subfolder/file3.c.html#REQ-1#3#20"
+            title="lines 3-20 in file tests/subfolder/file3.c"
+          >
+            
+            <b>[ 3-20 ]</b>
+            <span class="source__range-pointer_description">tests/subfolder/file3.c, function test_case_1()</span>
+            
+          </a></div>
+
+  
+</div>
+          </div><div class="source-file__toc-node">
+            
+
+
+<div
+  id="requirement:REQ-2"
+  class="source-file__requirement"
+  data-reqid="REQ-2"
+  
+>
+  
+  <div class="source-file__requirement-header">
+    <a
+      class="action_icon secondary"
+      href="../../../02_function_with_source_node/input.html#REQ-2"
+      title="Go to requirement in document"
+    ><svg class="svg_icon" width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M13,8 C13,7.5 12.5,7 12,7 L9,7 C8.5,7 8,6.5 8,6 L8,3 C8,2.5 7.5,2 7,2 L4,2 C3.5,2 3,2.5 3,3 L3,13 C3,13.5 3.5,14 4,14 L6,14" />
+  <line x1="8" y1="12" x2="14" y2="12" stroke-linecap="round"></line>
+  <polyline stroke-linecap="round" points="10 9.5 7.5 12 10 14.5"></polyline>
+  <path d="M13,9 C13,7 13,7 12.5,6.5 C11.5,5.5 10.8,4.8 10.3,4.3 C9.9,3.9 9.3,3.3 8.5,2.5 C8,2 7.5,2 7,2 L6,2" />
+</svg></a>
+    <div class="source-file__requirement-info">
+      <div class="source-file__requirement-uid">REQ-2</div>
+        Requirement Title #2
+    </div>
+  </div>
+  
+
+ <div class="source-file__requirement-links">
+
+          <a
+            class="source__range-pointer"
+            data-begin="22"
+            data-end="39"
+            data-traceability-file-type="other_file"
+            href="../../../_source_files/tests/file.c.html#REQ-2#22#39"
+            title="lines 22-39 in file tests/file.c"
+          >
+            
+            <b>[ 22-39 ]</b>
+            <span class="source__range-pointer_description">tests/file.c, function test_case_2()</span>
+            
+          </a>
+
+          <a
+            class="source__range-pointer"
+            data-begin="22"
+            data-end="39"
+            data-traceability-file-type="other_file"
+            href="../../../_source_files/tests/file2.c.html#REQ-2#22#39"
+            title="lines 22-39 in file tests/file2.c"
+          >
+            
+            <b>[ 22-39 ]</b>
+            <span class="source__range-pointer_description">tests/file2.c, function test_case_2()</span>
+            
+          </a>
+
+          <a
+            class="source__range-pointer"
+            data-begin="22"
+            data-end="39"
+            data-traceability-file-type="this_file"
+            href="../../../_source_files/tests/subfolder/file3.c.html#REQ-2#22#39"
+            title="lines 22-39 in file tests/subfolder/file3.c"
+          >
+            
+            <b>[ 22-39 ]</b>
+            <span class="source__range-pointer_description">tests/subfolder/file3.c, function test_case_2()</span>
+            
+          </a></div>
+
+  
+</div>
+          </div><div class="source-file__toc-node">
+            
+
+
+<div
+  id="requirement:TEST_DOC/tests/subfolder/file3.c/test_case_1"
+  class="source-file__requirement"
+  data-reqid="TEST_DOC/tests/subfolder/file3.c/test_case_1"
+  
+>
+  
+  <div class="source-file__requirement-header">
+    <a
+      class="action_icon secondary"
+      href="../../../02_function_with_source_node/description.html#TEST_DOC-tests-subfolder-file3-c-test_case_1"
+      title="Go to requirement in document"
+    ><svg class="svg_icon" width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M13,8 C13,7.5 12.5,7 12,7 L9,7 C8.5,7 8,6.5 8,6 L8,3 C8,2.5 7.5,2 7,2 L4,2 C3.5,2 3,2.5 3,3 L3,13 C3,13.5 3.5,14 4,14 L6,14" />
+  <line x1="8" y1="12" x2="14" y2="12" stroke-linecap="round"></line>
+  <polyline stroke-linecap="round" points="10 9.5 7.5 12 10 14.5"></polyline>
+  <path d="M13,9 C13,7 13,7 12.5,6.5 C11.5,5.5 10.8,4.8 10.3,4.3 C9.9,3.9 9.3,3.3 8.5,2.5 C8,2 7.5,2 7,2 L6,2" />
+</svg></a>
+    <div class="source-file__requirement-info">
+      <div class="source-file__requirement-uid">TEST_DOC/tests/subfolder/file3.c/test_case_1</div>
+        test_case_1
+    </div>
+  </div>
+  
+
+ <div class="source-file__requirement-links">
+
+          <a
+            class="source__range-pointer"
+            data-begin="3"
+            data-end="20"
+            data-traceability-file-type="this_file"
+            href="../../../_source_files/tests/subfolder/file3.c.html#TEST_DOC/tests/subfolder/file3.c/test_case_1#3#20"
+            title="lines 3-20 in file tests/subfolder/file3.c"
+          >
+            
+            <b>[ 3-20 ]</b>
+            <span class="source__range-pointer_description">tests/subfolder/file3.c, function test_case_1()</span>
+            
+          </a></div>
+
+  
+</div>
+          </div><div class="source-file__toc-node">
+            
+
+
+<div
+  id="requirement:TEST_DOC/tests/subfolder/file3.c/test_case_2"
+  class="source-file__requirement"
+  data-reqid="TEST_DOC/tests/subfolder/file3.c/test_case_2"
+  
+>
+  
+  <div class="source-file__requirement-header">
+    <a
+      class="action_icon secondary"
+      href="../../../02_function_with_source_node/description.html#TEST_DOC-tests-subfolder-file3-c-test_case_2"
+      title="Go to requirement in document"
+    ><svg class="svg_icon" width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M13,8 C13,7.5 12.5,7 12,7 L9,7 C8.5,7 8,6.5 8,6 L8,3 C8,2.5 7.5,2 7,2 L4,2 C3.5,2 3,2.5 3,3 L3,13 C3,13.5 3.5,14 4,14 L6,14" />
+  <line x1="8" y1="12" x2="14" y2="12" stroke-linecap="round"></line>
+  <polyline stroke-linecap="round" points="10 9.5 7.5 12 10 14.5"></polyline>
+  <path d="M13,9 C13,7 13,7 12.5,6.5 C11.5,5.5 10.8,4.8 10.3,4.3 C9.9,3.9 9.3,3.3 8.5,2.5 C8,2 7.5,2 7,2 L6,2" />
+</svg></a>
+    <div class="source-file__requirement-info">
+      <div class="source-file__requirement-uid">TEST_DOC/tests/subfolder/file3.c/test_case_2</div>
+        test_case_2
+    </div>
+  </div>
+  
+
+ <div class="source-file__requirement-links">
+
+          <a
+            class="source__range-pointer"
+            data-begin="22"
+            data-end="39"
+            data-traceability-file-type="this_file"
+            href="../../../_source_files/tests/subfolder/file3.c.html#TEST_DOC/tests/subfolder/file3.c/test_case_2#22#39"
+            title="lines 22-39 in file tests/subfolder/file3.c"
+          >
+            
+            <b>[ 22-39 ]</b>
+            <span class="source__range-pointer_description">tests/subfolder/file3.c, function test_case_2()</span>
+            
+          </a></div>
+
+  
+</div>
+          </div></div>
+  </sdoc-tab-content>
+  <sdoc-tab-content id="Ranges">
+    <div class="source-file__toc"><div class="source-file__toc-range">
+            <div class="source-file__toc-range-header">
+
+<a
+  class="source__range-pointer action_button"
+  data-begin="3"
+  data-end="20"
+  href="../../../_source_files/tests/subfolder/file3.c.html##3#20"
+  title="Click to toggle range (Ctrl/Cmd + Click with focus)"
+><span class="source__range-definition">3 - 20 | function test_case_1()</span></a></div>
+            
+              
+                <div class="source-file__toc-range-node">
+                
+
+  
+
+
+<div
+  id="requirement:REQ-1"
+  class="source-file__requirement"
+  data-reqid="REQ-1"
+  
+    data-begin="3"
+    data-end="20"
+  
+>
+  
+  <details>
+    <summary>
+  
+  <div class="source-file__requirement-header">
+    <a
+      class="action_icon secondary"
+      href="../../../02_function_with_source_node/input.html#REQ-1"
+      title="Go to requirement in document"
+    ><svg class="svg_icon" width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M13,8 C13,7.5 12.5,7 12,7 L9,7 C8.5,7 8,6.5 8,6 L8,3 C8,2.5 7.5,2 7,2 L4,2 C3.5,2 3,2.5 3,3 L3,13 C3,13.5 3.5,14 4,14 L6,14" />
+  <line x1="8" y1="12" x2="14" y2="12" stroke-linecap="round"></line>
+  <polyline stroke-linecap="round" points="10 9.5 7.5 12 10 14.5"></polyline>
+  <path d="M13,9 C13,7 13,7 12.5,6.5 C11.5,5.5 10.8,4.8 10.3,4.3 C9.9,3.9 9.3,3.3 8.5,2.5 C8,2 7.5,2 7,2 L6,2" />
+</svg></a>
+    <div class="source-file__requirement-info">
+      <div class="source-file__requirement-uid">REQ-1</div>
+        Requirement Title
+    </div>
+  </div>
+  
+    </summary>
+  
+
+ <div class="source-file__requirement-links">
+
+          <a
+            class="source__range-pointer"
+            data-begin="3"
+            data-end="20"
+            data-traceability-file-type="other_file"
+            href="../../../_source_files/tests/file.c.html#REQ-1#3#20"
+            title="lines 3-20 in file tests/file.c"
+          >
+            
+            <b>[ 3-20 ]</b>
+            <span class="source__range-pointer_description">tests/file.c, function test_case_1()</span>
+            
+          </a>
+
+          <a
+            class="source__range-pointer"
+            data-begin="3"
+            data-end="20"
+            data-traceability-file-type="other_file"
+            href="../../../_source_files/tests/file2.c.html#REQ-1#3#20"
+            title="lines 3-20 in file tests/file2.c"
+          >
+            
+            <b>[ 3-20 ]</b>
+            <span class="source__range-pointer_description">tests/file2.c, function test_case_1()</span>
+            
+          </a>
+
+          <a
+            class="source__range-pointer"
+            data-begin="3"
+            data-end="20"
+            data-traceability-file-type="this_file"
+            href="../../../_source_files/tests/subfolder/file3.c.html#REQ-1#3#20"
+            title="lines 3-20 in file tests/subfolder/file3.c"
+          >
+            
+            <b>[ 3-20 ]</b>
+            <span class="source__range-pointer_description">tests/subfolder/file3.c, function test_case_1()</span>
+            
+          </a></div>
+
+  
+  </details>
+  
+</div>
+                </div>
+              
+            
+              
+                <div class="source-file__toc-range-node">
+                
+
+  
+
+
+<div
+  id="requirement:TEST_DOC/tests/subfolder/file3.c/test_case_1"
+  class="source-file__requirement"
+  data-reqid="TEST_DOC/tests/subfolder/file3.c/test_case_1"
+  
+    data-begin="3"
+    data-end="20"
+  
+>
+  
+  <details>
+    <summary>
+  
+  <div class="source-file__requirement-header">
+    <a
+      class="action_icon secondary"
+      href="../../../02_function_with_source_node/description.html#TEST_DOC-tests-subfolder-file3-c-test_case_1"
+      title="Go to requirement in document"
+    ><svg class="svg_icon" width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M13,8 C13,7.5 12.5,7 12,7 L9,7 C8.5,7 8,6.5 8,6 L8,3 C8,2.5 7.5,2 7,2 L4,2 C3.5,2 3,2.5 3,3 L3,13 C3,13.5 3.5,14 4,14 L6,14" />
+  <line x1="8" y1="12" x2="14" y2="12" stroke-linecap="round"></line>
+  <polyline stroke-linecap="round" points="10 9.5 7.5 12 10 14.5"></polyline>
+  <path d="M13,9 C13,7 13,7 12.5,6.5 C11.5,5.5 10.8,4.8 10.3,4.3 C9.9,3.9 9.3,3.3 8.5,2.5 C8,2 7.5,2 7,2 L6,2" />
+</svg></a>
+    <div class="source-file__requirement-info">
+      <div class="source-file__requirement-uid">TEST_DOC/tests/subfolder/file3.c/test_case_1</div>
+        test_case_1
+    </div>
+  </div>
+  
+    </summary>
+  
+
+ <div class="source-file__requirement-links">
+
+          <a
+            class="source__range-pointer"
+            data-begin="3"
+            data-end="20"
+            data-traceability-file-type="this_file"
+            href="../../../_source_files/tests/subfolder/file3.c.html#TEST_DOC/tests/subfolder/file3.c/test_case_1#3#20"
+            title="lines 3-20 in file tests/subfolder/file3.c"
+          >
+            
+            <b>[ 3-20 ]</b>
+            <span class="source__range-pointer_description">tests/subfolder/file3.c, function test_case_1()</span>
+            
+          </a></div>
+
+  
+  </details>
+  
+</div>
+                </div>
+              
+            
+          </div><div class="source-file__toc-range">
+            <div class="source-file__toc-range-header">
+
+<a
+  class="source__range-pointer action_button"
+  data-begin="22"
+  data-end="39"
+  href="../../../_source_files/tests/subfolder/file3.c.html##22#39"
+  title="Click to toggle range (Ctrl/Cmd + Click with focus)"
+><span class="source__range-definition">22 - 39 | function test_case_2()</span></a></div>
+            
+              
+                <div class="source-file__toc-range-node">
+                
+
+  
+
+
+<div
+  id="requirement:REQ-2"
+  class="source-file__requirement"
+  data-reqid="REQ-2"
+  
+    data-begin="22"
+    data-end="39"
+  
+>
+  
+  <details>
+    <summary>
+  
+  <div class="source-file__requirement-header">
+    <a
+      class="action_icon secondary"
+      href="../../../02_function_with_source_node/input.html#REQ-2"
+      title="Go to requirement in document"
+    ><svg class="svg_icon" width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M13,8 C13,7.5 12.5,7 12,7 L9,7 C8.5,7 8,6.5 8,6 L8,3 C8,2.5 7.5,2 7,2 L4,2 C3.5,2 3,2.5 3,3 L3,13 C3,13.5 3.5,14 4,14 L6,14" />
+  <line x1="8" y1="12" x2="14" y2="12" stroke-linecap="round"></line>
+  <polyline stroke-linecap="round" points="10 9.5 7.5 12 10 14.5"></polyline>
+  <path d="M13,9 C13,7 13,7 12.5,6.5 C11.5,5.5 10.8,4.8 10.3,4.3 C9.9,3.9 9.3,3.3 8.5,2.5 C8,2 7.5,2 7,2 L6,2" />
+</svg></a>
+    <div class="source-file__requirement-info">
+      <div class="source-file__requirement-uid">REQ-2</div>
+        Requirement Title #2
+    </div>
+  </div>
+  
+    </summary>
+  
+
+ <div class="source-file__requirement-links">
+
+          <a
+            class="source__range-pointer"
+            data-begin="22"
+            data-end="39"
+            data-traceability-file-type="other_file"
+            href="../../../_source_files/tests/file.c.html#REQ-2#22#39"
+            title="lines 22-39 in file tests/file.c"
+          >
+            
+            <b>[ 22-39 ]</b>
+            <span class="source__range-pointer_description">tests/file.c, function test_case_2()</span>
+            
+          </a>
+
+          <a
+            class="source__range-pointer"
+            data-begin="22"
+            data-end="39"
+            data-traceability-file-type="other_file"
+            href="../../../_source_files/tests/file2.c.html#REQ-2#22#39"
+            title="lines 22-39 in file tests/file2.c"
+          >
+            
+            <b>[ 22-39 ]</b>
+            <span class="source__range-pointer_description">tests/file2.c, function test_case_2()</span>
+            
+          </a>
+
+          <a
+            class="source__range-pointer"
+            data-begin="22"
+            data-end="39"
+            data-traceability-file-type="this_file"
+            href="../../../_source_files/tests/subfolder/file3.c.html#REQ-2#22#39"
+            title="lines 22-39 in file tests/subfolder/file3.c"
+          >
+            
+            <b>[ 22-39 ]</b>
+            <span class="source__range-pointer_description">tests/subfolder/file3.c, function test_case_2()</span>
+            
+          </a></div>
+
+  
+  </details>
+  
+</div>
+                </div>
+              
+            
+              
+                <div class="source-file__toc-range-node">
+                
+
+  
+
+
+<div
+  id="requirement:TEST_DOC/tests/subfolder/file3.c/test_case_2"
+  class="source-file__requirement"
+  data-reqid="TEST_DOC/tests/subfolder/file3.c/test_case_2"
+  
+    data-begin="22"
+    data-end="39"
+  
+>
+  
+  <details>
+    <summary>
+  
+  <div class="source-file__requirement-header">
+    <a
+      class="action_icon secondary"
+      href="../../../02_function_with_source_node/description.html#TEST_DOC-tests-subfolder-file3-c-test_case_2"
+      title="Go to requirement in document"
+    ><svg class="svg_icon" width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M13,8 C13,7.5 12.5,7 12,7 L9,7 C8.5,7 8,6.5 8,6 L8,3 C8,2.5 7.5,2 7,2 L4,2 C3.5,2 3,2.5 3,3 L3,13 C3,13.5 3.5,14 4,14 L6,14" />
+  <line x1="8" y1="12" x2="14" y2="12" stroke-linecap="round"></line>
+  <polyline stroke-linecap="round" points="10 9.5 7.5 12 10 14.5"></polyline>
+  <path d="M13,9 C13,7 13,7 12.5,6.5 C11.5,5.5 10.8,4.8 10.3,4.3 C9.9,3.9 9.3,3.3 8.5,2.5 C8,2 7.5,2 7,2 L6,2" />
+</svg></a>
+    <div class="source-file__requirement-info">
+      <div class="source-file__requirement-uid">TEST_DOC/tests/subfolder/file3.c/test_case_2</div>
+        test_case_2
+    </div>
+  </div>
+  
+    </summary>
+  
+
+ <div class="source-file__requirement-links">
+
+          <a
+            class="source__range-pointer"
+            data-begin="22"
+            data-end="39"
+            data-traceability-file-type="this_file"
+            href="../../../_source_files/tests/subfolder/file3.c.html#TEST_DOC/tests/subfolder/file3.c/test_case_2#22#39"
+            title="lines 22-39 in file tests/subfolder/file3.c"
+          >
+            
+            <b>[ 22-39 ]</b>
+            <span class="source__range-pointer_description">tests/subfolder/file3.c, function test_case_2()</span>
+            
+          </a></div>
+
+  
+  </details>
+  
+</div>
+                </div>
+              
+            
+          </div></div>
+  </sdoc-tab-content>
+  </div>
+
+</div>
+
+    </aside><aside
+        data-position="right"
+        class="layout_toc"
+      >
+        
+      </aside><header class="layout_header">
+      <div class="header">
+
+  
+  <svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <polyline points="14 5 14 10.5 8 15 2 10.5 2 5 8 1 14 5 8 9.5"></polyline>
+  <polyline points="2.5 5.5 8 9.5 8 15"></polyline>
+</svg>
+  <div
+    class="header__project_name"
+    title="Untitled Project"
+  >Untitled Project
+  </div>
+
+  
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20" class="sc-gLvsXj bpkaBy"><path stroke="currentColor" d="M12.5 4.5l-5 11" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      <svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <line x1="10" y1="3" x2="6" y2="13"></line>
+    <path d="M3.5,5 C2.5,6 1.5,7 1.5,7 C0.5,8 0.5,8 1.5,9 C1.5,9 2.5,10 3.5,11"/>
+    <path d="M12.5,5 C14,6.5 14.5,7 14.5,7 C15.5,8 15.5,8 14.5,9 C14.5,9 14,9.5 12.5,11"/>
+</svg>
+<div class="header__document_title"
+  title="tests/subfolder/file3.c">
+  tests/subfolder/file3.c
+</div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20" class="sc-gLvsXj bpkaBy"><path stroke="currentColor" d="M12.5 4.5l-5 11" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+    <div class="pagetype">Source file coverage</div><div class="actions_group">
+  <div id="sourceCodeCoverageSwitch" class="source-file__toggle-switch"></div>
+</div></div>
+    </header>
+
+    <main class="layout_main">
+      
+  <div class="main">
+
+<div id="sourceContainer" class="source-file__source">
+
+  <div class="sdoc-table_key_value">
+  
+  <div class="sdoc-table_key_value-key">Path:</div>
+  <div class="sdoc-table_key_value-value">tests/subfolder/file3.c</div>
+  <div class="sdoc-table_key_value-key">Lines:</div>
+  <div class="sdoc-table_key_value-value">39</div>
+  <div class="sdoc-table_key_value-key">Non-empty lines:</div>
+  <div class="sdoc-table_key_value-value">37</div>
+  <div class="sdoc-table_key_value-key">Non-empty lines covered with requirements:</div>
+  <div class="sdoc-table_key_value-value">36 / 37 (97.3%)</div>
+  <div class="sdoc-table_key_value-key">Functions:</div>
+  <div class="sdoc-table_key_value-value">2</div>
+  <div class="sdoc-table_key_value-key">Functions covered by requirements:</div>
+  <div class="sdoc-table_key_value-value">2 / 2 (100.0%)</div>
+</div><div id="source" class="source">
+
+      <div data-line="1" class="source__line">
+        <div data-line="1" id="line-1" class="source__line-number"><pre>1</pre></div>
+        <div data-line="1" class="source__line-content">
+            <pre class="highlight"><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span></pre></div>
+      </div>
+
+      <div data-line="2" class="source__line">
+        <div data-line="2" id="line-2" class="source__line-number"><pre>2</pre></div>
+        <div data-line="2" class="source__line-content"><pre data-state="empty" style="user-select: none">&nbsp;</pre></div>
+      </div><div
+          class="source__range collapsed"
+          data-begin="3"
+          data-end="20"
+        >
+          <div class="source__range-header">
+
+<a
+  class="source__range-pointer action_button"
+  data-begin="3"
+  data-end="20"
+  href="../../../_source_files/tests/subfolder/file3.c.html##3#20"
+  title="Click to toggle range (Ctrl/Cmd + Click with focus)"
+><span class="source__range-definition">3 - 20 | function test_case_1()</span></a></div>
+          <div class="source__range-cell">
+            <div
+              class="source__range-handler"
+              data-begin="3"
+              data-end="20"
+            ><svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+  <path d="M8.25,8 L7.75,8 M2.25,8 L1.75,8 M14.25,8 L13.75,8 M11.25,8 L10.75,8 M5.25,8 L4.75,8"></path>
+  <g class="expanded">
+    <g class="arrow_top">
+      <polyline points="10.5 13.5 8 11 5.5 13.5"></polyline>
+      <line x1="8" y1="11" x2="8" y2="15"></line>
+    </g>
+    <g class="arrow_bottom">
+      <polyline points="10.5 2.5 8 5 5.5 2.5"></polyline>
+      <line x1="8" y1="5" x2="8" y2="1"></line>
+    </g>
+  </g>
+  <g class="collapsed">
+    <g class="arrow_top_coll">
+      <polyline points="10.5 3.5 8 1 5.5 3.5"></polyline>
+      <line x1="8" y1="1" x2="8" y2="5"></line>
+    </g>
+    <g class="arrow_bottom_coll">
+      <polyline points="10.5 12.5 8 15 5.5 12.5"></polyline>
+      <line x1="8" y1="15" x2="8" y2="11"></line>
+    </g>
+  </g>
+</svg></div>
+          </div>
+          <div class="source__range-cell">
+            <ul class="source__range-titles-list"><li>
+                  
+
+
+<span class="source__range-title-icon" title="Relation from source file to document node"><svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+        <g class="svg_source_pointer_brackets">
+          <path d="M3.5,8 C2,9.5 1.5,10 1.5,10 C0.5,11 0.5,11 1.5,12 C1.5,12 2,12.5 3.5,14" id="lb"></path>
+          <path d="M12.5,8 C14,9.5 14.5,10 14.5,10 C15.5,11 15.5,11 14.5,12 C14.5,12 14,12.5 12.5,14" id="rb"></path>
+        </g>
+        <g class="svg_source_pointer_arrow">
+          <line x1="8" y1="12" x2="8" y2="4" id="arr0"></line>
+          <polyline points="10.5 6.5 8 4 5.5 6.5" id="arr"></polyline>
+        </g>
+
+</svg></span>
+  "1. Requirement Title" (REQUIREMENT)
+
+                </li><li>
+                  
+
+
+<span class="source__range-title-icon" title="Relation from document node to source file"><svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+        <g class="svg_source_pointer_brackets">
+          <path d="M3.5,8 C2,9.5 1.5,10 1.5,10 C0.5,11 0.5,11 1.5,12 C1.5,12 2,12.5 3.5,14" id="lb"></path>
+          <path d="M12.5,8 C14,9.5 14.5,10 14.5,10 C15.5,11 15.5,11 14.5,12 C14.5,12 14,12.5 12.5,14" id="rb"></path>
+        </g>
+        <g class="svg_source_pointer_arrow">
+          <line x1="8" y1="12" x2="8" y2="4" id="arr0"></line>
+          <polyline points="10.5 9.5 8 12 5.5 9.5" id="arr"></polyline>
+        </g>
+</svg></span>
+  "1.3.1.1. test_case_1" (TEST_SPEC)
+
+                </li></ul>
+            <div class="source__range-banner source__range-start">
+
+
+
+
+
+
+
+
+  <sdoc-node
+    node-style="readonly"
+    node-role="requirement"
+      show-node-type-name="REQUIREMENT"
+    
+      node-view="narrative"
+    data-testid="node-requirement"
+  >
+
+    <sdoc-anchor
+  id="REQ-1"
+  data-anchor="REQ-1"
+  node-role="requirement"
+  data-uid="REQ-1"
+  
+  
+>
+  
+  <div class="anchor_block" data-testid="anchor_hover_button">
+    
+      
+<div class="anchor_button" title="Click to copy" data-testid="section-anchor-button">
+  <span class="anchor_base_icon" style="line-height: 0.1;">
+    <span class="svg_icon_not_hover_visible"><svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+  <circle cx="8" cy="3" r="1"></circle>
+  <line x1="8" y1="4" x2="8" y2="14.5"></line>
+  <path d="M5.5,6 C5.5,6 7,6 10.5,6 C10.5,6 5.5,6 5.5,6 Z"/>
+  <path d="M2,11 C3,10 3.5,9.5 3.5,9.5 C3.5,12 5,13 8,13 C11,13 12.5,12 12.5,9.5 C12.5,9.5 13,10 14,11"/>
+</svg></span>
+    <span class="svg_icon_hover_visible"><svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+  <path d="M8,2 L12,2 C13,2 14,3 14,4 L14,8 C14,9 13,10 12,10 L8,10 C7,10 6,9 6,8 L6,4 C6,3 7,2 8,2 Z"/>
+  <path d="M10,12 C10,13 9,14 8,14 L4,14 C3,14 2,13 2,12 L2,8 C2,7 3,6 4,6"/>
+</svg></span>
+  </span>
+  <span class="anchor_check_icon" style="line-height: 0.1; display: none;">
+    <svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+  <path d="M2.5,8.5 C2.5,8.5 3.5,9.5 6,12 C11,7 13.5,4.5 13.5,4.5" />
+</svg>
+  </span>
+  <span class="anchor_button_text">REQ-1</span>
+</div>
+    </div></sdoc-anchor>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<sdoc-node-content
+  node-view="table"
+  data-level="1"
+  show-node-type-name="REQUIREMENT"
+  data-testid="requirement-style-table"
+>
+  
+  
+  
+  <sdoc-node-title
+    data-level="1"
+  >
+    
+
+<sdoc-autogen>1.&nbsp;Requirement Title</sdoc-autogen>
+  </sdoc-node-title>
+  
+  
+
+  
+    <sdoc-scope class="node_fields_group-secondary">
+      
+    <sdoc-node-field-label>UID:</sdoc-node-field-label>
+    <sdoc-node-field
+      data-field-type="singleline"
+      data-field-label="UID"
+    >
+
+<sdoc-autogen>REQ-1</sdoc-autogen></sdoc-node-field>
+  
+      
+    <sdoc-node-field-label>RELATIONS (Child):</sdoc-node-field-label>
+    <sdoc-node-field data-field-label="child relations">
+      <ul class="requirement__link">
+        <li>
+          <a data-turbo="false" class="requirement__link-child" href="../02_function_with_source_node/description.html#TEST_DOC-tests-file-c-test_case_1">
+            <span class="requirement__child-uid">TEST_DOC/tests/file.c/test_case_1</span>
+            test_case_1
+            
+          </a>
+        </li>
+        <li>
+          <a data-turbo="false" class="requirement__link-child" href="../02_function_with_source_node/description.html#TEST_DOC-tests-file2-c-test_case_1">
+            <span class="requirement__child-uid">TEST_DOC/tests/file2.c/test_case_1</span>
+            test_case_1
+            
+          </a>
+        </li>
+        <li>
+          <a data-turbo="false" class="requirement__link-child" href="../02_function_with_source_node/description.html#TEST_DOC-tests-subfolder-file3-c-test_case_1">
+            <span class="requirement__child-uid">TEST_DOC/tests/subfolder/file3.c/test_case_1</span>
+            test_case_1
+            
+          </a>
+        </li>
+      </ul>
+    </sdoc-node-field>
+      
+      <sdoc-node-field-label>RELATIONS (File):</sdoc-node-field-label>
+      <sdoc-node-field data-field-label="file relations">
+        <ul class="requirement__link">
+              <li>
+                <a data-turbo="false" class="requirement__link-file" href="../_source_files/tests/file.c.html#REQ-1#3#20">
+                  tests/file.c, <i>lines: 3-20</i>, function test_case_1()
+                </a>
+              </li>
+              <li>
+                <a data-turbo="false" class="requirement__link-file" href="../_source_files/tests/file2.c.html#REQ-1#3#20">
+                  tests/file2.c, <i>lines: 3-20</i>, function test_case_1()
+                </a>
+              </li>
+              <li>
+                <a data-turbo="false" class="requirement__link-file" href="../_source_files/tests/subfolder/file3.c.html#REQ-1#3#20">
+                  tests/subfolder/file3.c, <i>lines: 3-20</i>, function test_case_1()
+                </a>
+              </li></ul>
+      </sdoc-node-field>
+    </sdoc-scope>
+    
+    <sdoc-scope class="node_fields_group-primary">
+      
+    <sdoc-node-field-label>STATEMENT:</sdoc-node-field-label>
+    <sdoc-node-field
+      data-field-label="statement"
+    >
+
+<sdoc-autogen><div class="document">
+<p>Requirement Statement</p>
+</div>
+</sdoc-autogen></sdoc-node-field>
+      
+      
+
+
+
+      
+
+
+
+  
+    </sdoc-scope>
+    
+  
+
+</sdoc-node-content>
+
+
+  </sdoc-node>
+
+
+
+
+
+
+
+
+  <sdoc-node
+    node-style="readonly"
+    node-role="requirement"
+      show-node-type-name="TEST_SPEC"
+    
+      node-view="narrative"
+    data-testid="node-requirement"
+  >
+
+    <sdoc-anchor
+  id="TEST_DOC-tests-subfolder-file3-c-test_case_1"
+  data-anchor="TEST_DOC-tests-subfolder-file3-c-test_case_1"
+  node-role="requirement"
+  data-uid="TEST_DOC/tests/subfolder/file3.c/test_case_1"
+  
+  
+>
+  
+  <div class="anchor_block" data-testid="anchor_hover_button">
+    
+      
+<div class="anchor_button" title="Click to copy" data-testid="section-anchor-button">
+  <span class="anchor_base_icon" style="line-height: 0.1;">
+    <span class="svg_icon_not_hover_visible"><svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+  <circle cx="8" cy="3" r="1"></circle>
+  <line x1="8" y1="4" x2="8" y2="14.5"></line>
+  <path d="M5.5,6 C5.5,6 7,6 10.5,6 C10.5,6 5.5,6 5.5,6 Z"/>
+  <path d="M2,11 C3,10 3.5,9.5 3.5,9.5 C3.5,12 5,13 8,13 C11,13 12.5,12 12.5,9.5 C12.5,9.5 13,10 14,11"/>
+</svg></span>
+    <span class="svg_icon_hover_visible"><svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+  <path d="M8,2 L12,2 C13,2 14,3 14,4 L14,8 C14,9 13,10 12,10 L8,10 C7,10 6,9 6,8 L6,4 C6,3 7,2 8,2 Z"/>
+  <path d="M10,12 C10,13 9,14 8,14 L4,14 C3,14 2,13 2,12 L2,8 C2,7 3,6 4,6"/>
+</svg></span>
+  </span>
+  <span class="anchor_check_icon" style="line-height: 0.1; display: none;">
+    <svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+  <path d="M2.5,8.5 C2.5,8.5 3.5,9.5 6,12 C11,7 13.5,4.5 13.5,4.5" />
+</svg>
+  </span>
+  <span class="anchor_button_text">TEST_DOC-tests-subfolder-file3-c-test_case_1</span>
+</div>
+    </div></sdoc-anchor>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<sdoc-node-content
+  node-view="table"
+  data-level="1.3.1.1"
+  show-node-type-name="TEST_SPEC"
+  data-testid="requirement-style-table"
+>
+  
+  
+  
+  <sdoc-node-title
+    data-level="1.3.1.1"
+  >
+    
+
+<sdoc-autogen>1.3.1.1.&nbsp;test_case_1</sdoc-autogen>
+  </sdoc-node-title>
+  
+  
+
+  
+    <sdoc-scope class="node_fields_group-secondary">
+      
+    <sdoc-node-field-label>UID:</sdoc-node-field-label>
+    <sdoc-node-field
+      data-field-type="singleline"
+      data-field-label="UID"
+    >
+
+<sdoc-autogen>TEST_DOC/tests/subfolder/file3.c/test_case_1</sdoc-autogen></sdoc-node-field>
+  
+      
+    <sdoc-node-field-label>RELATIONS (Parent):</sdoc-node-field-label>
+    <sdoc-node-field data-field-label="parent relations">
+      <ul class="requirement__link">
+        <li>
+          <a data-turbo="false" class="requirement__link-parent" href="../02_function_with_source_node/input.html#REQ-1">
+            <span class="requirement__parent-uid">REQ-1</span>
+            Requirement Title
+            
+          </a>
+        </li>
+      </ul>
+    </sdoc-node-field>
+      
+      <sdoc-node-field-label>RELATIONS (File):</sdoc-node-field-label>
+      <sdoc-node-field data-field-label="file relations">
+        <ul class="requirement__link">
+              <li>
+                <a data-turbo="false" class="requirement__link-file" href="../_source_files/tests/subfolder/file3.c.html#TEST_DOC/tests/subfolder/file3.c/test_case_1#3#20">
+                  tests/subfolder/file3.c, <i>lines: 3-20</i>, function test_case_1()
+                </a>
+              </li></ul>
+      </sdoc-node-field>
+    </sdoc-scope>
+    
+    <sdoc-scope class="node_fields_group-primary">
+      
+      
+      
+
+
+
+      
+
+
+
+  
+    <sdoc-node-field-label>INTENTION:</sdoc-node-field-label>
+    <sdoc-node-field
+      data-field-label="INTENTION"
+    >
+
+<sdoc-autogen><div class="document">
+<p>Intention...</p>
+</div>
+</sdoc-autogen></sdoc-node-field>
+    <sdoc-node-field-label>INPUT:</sdoc-node-field-label>
+    <sdoc-node-field
+      data-field-label="INPUT"
+    >
+
+<sdoc-autogen><div class="document">
+<p>This
+is
+a statement</p>
+<p>And this is the same statement's another paragraph.</p>
+</div>
+</sdoc-autogen></sdoc-node-field>
+    <sdoc-node-field-label>EXPECTED_RESULTS:</sdoc-node-field-label>
+    <sdoc-node-field
+      data-field-label="EXPECTED_RESULTS"
+    >
+
+<sdoc-autogen><div class="document">
+<p>This is a comment.</p>
+</div>
+</sdoc-autogen></sdoc-node-field>
+    </sdoc-scope>
+    
+  
+
+</sdoc-node-content>
+
+
+  </sdoc-node></div>
+          </div>
+        </div>
+      
+
+      <div data-line="3" class="source__line">
+        <div data-line="3" id="line-3" class="source__line-number"><pre>3</pre></div>
+        <div data-line="3" class="source__line-content">
+            <pre class="highlight"><span class="cm">/**</span></pre></div>
+      </div>
+
+      <div data-line="4" class="source__line">
+        <div data-line="4" id="line-4" class="source__line-number"><pre>4</pre></div>
+        <div data-line="4" class="source__line-content">
+            <pre class="highlight"><span class="cm"> * Some text.</span></pre></div>
+      </div>
+
+      <div data-line="5" class="source__line">
+        <div data-line="5" id="line-5" class="source__line-number"><pre>5</pre></div>
+        <div data-line="5" class="source__line-content">
+            <pre class="highlight"><span class="cm"> *</span></pre></div>
+      </div>
+
+      <div data-line="6" class="source__line">
+        <div data-line="6" id="line-6" class="source__line-number"><pre>6</pre></div>
+        <div data-line="6" class="source__line-content">
+            <pre class="highlight"><span class="cm"> * @relation(REQ-1, scope=function)</span></pre></div>
+      </div>
+
+      <div data-line="7" class="source__line">
+        <div data-line="7" id="line-7" class="source__line-number"><pre>7</pre></div>
+        <div data-line="7" class="source__line-content">
+            <pre class="highlight"><span class="cm"> *</span></pre></div>
+      </div>
+
+      <div data-line="8" class="source__line">
+        <div data-line="8" id="line-8" class="source__line-number"><pre>8</pre></div>
+        <div data-line="8" class="source__line-content">
+            <pre class="highlight"><span class="cm"> * INTENTION: Intention...</span></pre></div>
+      </div>
+
+      <div data-line="9" class="source__line">
+        <div data-line="9" id="line-9" class="source__line-number"><pre>9</pre></div>
+        <div data-line="9" class="source__line-content">
+            <pre class="highlight"><span class="cm"> *</span></pre></div>
+      </div>
+
+      <div data-line="10" class="source__line">
+        <div data-line="10" id="line-10" class="source__line-number"><pre>10</pre></div>
+        <div data-line="10" class="source__line-content">
+            <pre class="highlight"><span class="cm"> * INPUT: This</span></pre></div>
+      </div>
+
+      <div data-line="11" class="source__line">
+        <div data-line="11" id="line-11" class="source__line-number"><pre>11</pre></div>
+        <div data-line="11" class="source__line-content">
+            <pre class="highlight"><span class="cm"> *        is</span></pre></div>
+      </div>
+
+      <div data-line="12" class="source__line">
+        <div data-line="12" id="line-12" class="source__line-number"><pre>12</pre></div>
+        <div data-line="12" class="source__line-content">
+            <pre class="highlight"><span class="cm"> *        a statement</span></pre></div>
+      </div>
+
+      <div data-line="13" class="source__line">
+        <div data-line="13" id="line-13" class="source__line-number"><pre>13</pre></div>
+        <div data-line="13" class="source__line-content">
+            <pre class="highlight"><span class="cm"> *        \n\n</span></pre></div>
+      </div>
+
+      <div data-line="14" class="source__line">
+        <div data-line="14" id="line-14" class="source__line-number"><pre>14</pre></div>
+        <div data-line="14" class="source__line-content">
+            <pre class="highlight"><span class="cm"> *        And this is the same statement&#39;s another paragraph.</span></pre></div>
+      </div>
+
+      <div data-line="15" class="source__line">
+        <div data-line="15" id="line-15" class="source__line-number"><pre>15</pre></div>
+        <div data-line="15" class="source__line-content">
+            <pre class="highlight"><span class="cm"> *</span></pre></div>
+      </div>
+
+      <div data-line="16" class="source__line">
+        <div data-line="16" id="line-16" class="source__line-number"><pre>16</pre></div>
+        <div data-line="16" class="source__line-content">
+            <pre class="highlight"><span class="cm"> * EXPECTED_RESULTS: This is a comment.</span></pre></div>
+      </div>
+
+      <div data-line="17" class="source__line">
+        <div data-line="17" id="line-17" class="source__line-number"><pre>17</pre></div>
+        <div data-line="17" class="source__line-content">
+            <pre class="highlight"><span class="cm"> */</span></pre></div>
+      </div>
+
+      <div data-line="18" class="source__line">
+        <div data-line="18" id="line-18" class="source__line-number"><pre>18</pre></div>
+        <div data-line="18" class="source__line-content">
+            <pre class="highlight"><span class="kt">void</span><span class="w"> </span><span class="nf">test_case_1</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></pre></div>
+      </div>
+
+      <div data-line="19" class="source__line">
+        <div data-line="19" id="line-19" class="source__line-number"><pre>19</pre></div>
+        <div data-line="19" class="source__line-content">
+            <pre class="highlight"><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;hello world</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span></pre></div>
+      </div>
+
+      <div data-line="20" class="source__line">
+        <div data-line="20" id="line-20" class="source__line-number"><pre>20</pre></div>
+        <div data-line="20" class="source__line-content">
+            <pre class="highlight"><span class="p">}</span></pre></div>
+      </div>
+        <div
+          class="source__range-closer"
+          data-end="20"
+        >
+          <div class="source__range-closer-label">
+
+<a
+  class="source__range-pointer action_button"
+  data-begin="3"
+  data-end="20"
+  href="../../../_source_files/tests/subfolder/file3.c.html##3#20"
+  title="Click to toggle range (Ctrl/Cmd + Click with focus)"
+><span class="source__range-definition">3 - 20 | function test_case_1()</span></a></div>
+        </div>
+      
+
+      <div data-line="21" class="source__line">
+        <div data-line="21" id="line-21" class="source__line-number"><pre>21</pre></div>
+        <div data-line="21" class="source__line-content"><pre data-state="empty" style="user-select: none">&nbsp;</pre></div>
+      </div><div
+          class="source__range collapsed"
+          data-begin="22"
+          data-end="39"
+        >
+          <div class="source__range-header">
+
+<a
+  class="source__range-pointer action_button"
+  data-begin="22"
+  data-end="39"
+  href="../../../_source_files/tests/subfolder/file3.c.html##22#39"
+  title="Click to toggle range (Ctrl/Cmd + Click with focus)"
+><span class="source__range-definition">22 - 39 | function test_case_2()</span></a></div>
+          <div class="source__range-cell">
+            <div
+              class="source__range-handler"
+              data-begin="22"
+              data-end="39"
+            ><svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+  <path d="M8.25,8 L7.75,8 M2.25,8 L1.75,8 M14.25,8 L13.75,8 M11.25,8 L10.75,8 M5.25,8 L4.75,8"></path>
+  <g class="expanded">
+    <g class="arrow_top">
+      <polyline points="10.5 13.5 8 11 5.5 13.5"></polyline>
+      <line x1="8" y1="11" x2="8" y2="15"></line>
+    </g>
+    <g class="arrow_bottom">
+      <polyline points="10.5 2.5 8 5 5.5 2.5"></polyline>
+      <line x1="8" y1="5" x2="8" y2="1"></line>
+    </g>
+  </g>
+  <g class="collapsed">
+    <g class="arrow_top_coll">
+      <polyline points="10.5 3.5 8 1 5.5 3.5"></polyline>
+      <line x1="8" y1="1" x2="8" y2="5"></line>
+    </g>
+    <g class="arrow_bottom_coll">
+      <polyline points="10.5 12.5 8 15 5.5 12.5"></polyline>
+      <line x1="8" y1="15" x2="8" y2="11"></line>
+    </g>
+  </g>
+</svg></div>
+          </div>
+          <div class="source__range-cell">
+            <ul class="source__range-titles-list"><li>
+                  
+
+
+<span class="source__range-title-icon" title="Relation from source file to document node"><svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+        <g class="svg_source_pointer_brackets">
+          <path d="M3.5,8 C2,9.5 1.5,10 1.5,10 C0.5,11 0.5,11 1.5,12 C1.5,12 2,12.5 3.5,14" id="lb"></path>
+          <path d="M12.5,8 C14,9.5 14.5,10 14.5,10 C15.5,11 15.5,11 14.5,12 C14.5,12 14,12.5 12.5,14" id="rb"></path>
+        </g>
+        <g class="svg_source_pointer_arrow">
+          <line x1="8" y1="12" x2="8" y2="4" id="arr0"></line>
+          <polyline points="10.5 6.5 8 4 5.5 6.5" id="arr"></polyline>
+        </g>
+
+</svg></span>
+  "2. Requirement Title #2" (REQUIREMENT)
+
+                </li><li>
+                  
+
+
+<span class="source__range-title-icon" title="Relation from document node to source file"><svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+        <g class="svg_source_pointer_brackets">
+          <path d="M3.5,8 C2,9.5 1.5,10 1.5,10 C0.5,11 0.5,11 1.5,12 C1.5,12 2,12.5 3.5,14" id="lb"></path>
+          <path d="M12.5,8 C14,9.5 14.5,10 14.5,10 C15.5,11 15.5,11 14.5,12 C14.5,12 14,12.5 12.5,14" id="rb"></path>
+        </g>
+        <g class="svg_source_pointer_arrow">
+          <line x1="8" y1="12" x2="8" y2="4" id="arr0"></line>
+          <polyline points="10.5 9.5 8 12 5.5 9.5" id="arr"></polyline>
+        </g>
+</svg></span>
+  "1.3.1.2. test_case_2" (TEST_SPEC)
+
+                </li></ul>
+            <div class="source__range-banner source__range-start">
+
+
+
+
+
+
+
+
+  <sdoc-node
+    node-style="readonly"
+    node-role="requirement"
+      show-node-type-name="REQUIREMENT"
+    
+      node-view="narrative"
+    data-testid="node-requirement"
+  >
+
+    <sdoc-anchor
+  id="REQ-2"
+  data-anchor="REQ-2"
+  node-role="requirement"
+  data-uid="REQ-2"
+  
+  
+>
+  
+  <div class="anchor_block" data-testid="anchor_hover_button">
+    
+      
+<div class="anchor_button" title="Click to copy" data-testid="section-anchor-button">
+  <span class="anchor_base_icon" style="line-height: 0.1;">
+    <span class="svg_icon_not_hover_visible"><svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+  <circle cx="8" cy="3" r="1"></circle>
+  <line x1="8" y1="4" x2="8" y2="14.5"></line>
+  <path d="M5.5,6 C5.5,6 7,6 10.5,6 C10.5,6 5.5,6 5.5,6 Z"/>
+  <path d="M2,11 C3,10 3.5,9.5 3.5,9.5 C3.5,12 5,13 8,13 C11,13 12.5,12 12.5,9.5 C12.5,9.5 13,10 14,11"/>
+</svg></span>
+    <span class="svg_icon_hover_visible"><svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+  <path d="M8,2 L12,2 C13,2 14,3 14,4 L14,8 C14,9 13,10 12,10 L8,10 C7,10 6,9 6,8 L6,4 C6,3 7,2 8,2 Z"/>
+  <path d="M10,12 C10,13 9,14 8,14 L4,14 C3,14 2,13 2,12 L2,8 C2,7 3,6 4,6"/>
+</svg></span>
+  </span>
+  <span class="anchor_check_icon" style="line-height: 0.1; display: none;">
+    <svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+  <path d="M2.5,8.5 C2.5,8.5 3.5,9.5 6,12 C11,7 13.5,4.5 13.5,4.5" />
+</svg>
+  </span>
+  <span class="anchor_button_text">REQ-2</span>
+</div>
+    </div></sdoc-anchor>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<sdoc-node-content
+  node-view="table"
+  data-level="2"
+  show-node-type-name="REQUIREMENT"
+  data-testid="requirement-style-table"
+>
+  
+  
+  
+  <sdoc-node-title
+    data-level="2"
+  >
+    
+
+<sdoc-autogen>2.&nbsp;Requirement Title #2</sdoc-autogen>
+  </sdoc-node-title>
+  
+  
+
+  
+    <sdoc-scope class="node_fields_group-secondary">
+      
+    <sdoc-node-field-label>UID:</sdoc-node-field-label>
+    <sdoc-node-field
+      data-field-type="singleline"
+      data-field-label="UID"
+    >
+
+<sdoc-autogen>REQ-2</sdoc-autogen></sdoc-node-field>
+  
+      
+    <sdoc-node-field-label>RELATIONS (Child):</sdoc-node-field-label>
+    <sdoc-node-field data-field-label="child relations">
+      <ul class="requirement__link">
+        <li>
+          <a data-turbo="false" class="requirement__link-child" href="../02_function_with_source_node/description.html#TEST_DOC-tests-file-c-test_case_2">
+            <span class="requirement__child-uid">TEST_DOC/tests/file.c/test_case_2</span>
+            test_case_2
+            
+          </a>
+        </li>
+        <li>
+          <a data-turbo="false" class="requirement__link-child" href="../02_function_with_source_node/description.html#TEST_DOC-tests-file2-c-test_case_2">
+            <span class="requirement__child-uid">TEST_DOC/tests/file2.c/test_case_2</span>
+            test_case_2
+            
+          </a>
+        </li>
+        <li>
+          <a data-turbo="false" class="requirement__link-child" href="../02_function_with_source_node/description.html#TEST_DOC-tests-subfolder-file3-c-test_case_2">
+            <span class="requirement__child-uid">TEST_DOC/tests/subfolder/file3.c/test_case_2</span>
+            test_case_2
+            
+          </a>
+        </li>
+      </ul>
+    </sdoc-node-field>
+      
+      <sdoc-node-field-label>RELATIONS (File):</sdoc-node-field-label>
+      <sdoc-node-field data-field-label="file relations">
+        <ul class="requirement__link">
+              <li>
+                <a data-turbo="false" class="requirement__link-file" href="../_source_files/tests/file.c.html#REQ-2#22#39">
+                  tests/file.c, <i>lines: 22-39</i>, function test_case_2()
+                </a>
+              </li>
+              <li>
+                <a data-turbo="false" class="requirement__link-file" href="../_source_files/tests/file2.c.html#REQ-2#22#39">
+                  tests/file2.c, <i>lines: 22-39</i>, function test_case_2()
+                </a>
+              </li>
+              <li>
+                <a data-turbo="false" class="requirement__link-file" href="../_source_files/tests/subfolder/file3.c.html#REQ-2#22#39">
+                  tests/subfolder/file3.c, <i>lines: 22-39</i>, function test_case_2()
+                </a>
+              </li></ul>
+      </sdoc-node-field>
+    </sdoc-scope>
+    
+    <sdoc-scope class="node_fields_group-primary">
+      
+    <sdoc-node-field-label>STATEMENT:</sdoc-node-field-label>
+    <sdoc-node-field
+      data-field-label="statement"
+    >
+
+<sdoc-autogen><div class="document">
+<p>Requirement Statement #2</p>
+</div>
+</sdoc-autogen></sdoc-node-field>
+      
+      
+
+
+
+      
+
+
+
+  
+    </sdoc-scope>
+    
+  
+
+</sdoc-node-content>
+
+
+  </sdoc-node>
+
+
+
+
+
+
+
+
+  <sdoc-node
+    node-style="readonly"
+    node-role="requirement"
+      show-node-type-name="TEST_SPEC"
+    
+      node-view="narrative"
+    data-testid="node-requirement"
+  >
+
+    <sdoc-anchor
+  id="TEST_DOC-tests-subfolder-file3-c-test_case_2"
+  data-anchor="TEST_DOC-tests-subfolder-file3-c-test_case_2"
+  node-role="requirement"
+  data-uid="TEST_DOC/tests/subfolder/file3.c/test_case_2"
+  
+  
+>
+  
+  <div class="anchor_block" data-testid="anchor_hover_button">
+    
+      
+<div class="anchor_button" title="Click to copy" data-testid="section-anchor-button">
+  <span class="anchor_base_icon" style="line-height: 0.1;">
+    <span class="svg_icon_not_hover_visible"><svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+  <circle cx="8" cy="3" r="1"></circle>
+  <line x1="8" y1="4" x2="8" y2="14.5"></line>
+  <path d="M5.5,6 C5.5,6 7,6 10.5,6 C10.5,6 5.5,6 5.5,6 Z"/>
+  <path d="M2,11 C3,10 3.5,9.5 3.5,9.5 C3.5,12 5,13 8,13 C11,13 12.5,12 12.5,9.5 C12.5,9.5 13,10 14,11"/>
+</svg></span>
+    <span class="svg_icon_hover_visible"><svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+  <path d="M8,2 L12,2 C13,2 14,3 14,4 L14,8 C14,9 13,10 12,10 L8,10 C7,10 6,9 6,8 L6,4 C6,3 7,2 8,2 Z"/>
+  <path d="M10,12 C10,13 9,14 8,14 L4,14 C3,14 2,13 2,12 L2,8 C2,7 3,6 4,6"/>
+</svg></span>
+  </span>
+  <span class="anchor_check_icon" style="line-height: 0.1; display: none;">
+    <svg class="svg_icon" width="16px" height="16px" viewBox="0 0 16 16">
+  <path d="M2.5,8.5 C2.5,8.5 3.5,9.5 6,12 C11,7 13.5,4.5 13.5,4.5" />
+</svg>
+  </span>
+  <span class="anchor_button_text">TEST_DOC-tests-subfolder-file3-c-test_case_2</span>
+</div>
+    </div></sdoc-anchor>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<sdoc-node-content
+  node-view="table"
+  data-level="1.3.1.2"
+  show-node-type-name="TEST_SPEC"
+  data-testid="requirement-style-table"
+>
+  
+  
+  
+  <sdoc-node-title
+    data-level="1.3.1.2"
+  >
+    
+
+<sdoc-autogen>1.3.1.2.&nbsp;test_case_2</sdoc-autogen>
+  </sdoc-node-title>
+  
+  
+
+  
+    <sdoc-scope class="node_fields_group-secondary">
+      
+    <sdoc-node-field-label>UID:</sdoc-node-field-label>
+    <sdoc-node-field
+      data-field-type="singleline"
+      data-field-label="UID"
+    >
+
+<sdoc-autogen>TEST_DOC/tests/subfolder/file3.c/test_case_2</sdoc-autogen></sdoc-node-field>
+  
+      
+    <sdoc-node-field-label>RELATIONS (Parent):</sdoc-node-field-label>
+    <sdoc-node-field data-field-label="parent relations">
+      <ul class="requirement__link">
+        <li>
+          <a data-turbo="false" class="requirement__link-parent" href="../02_function_with_source_node/input.html#REQ-2">
+            <span class="requirement__parent-uid">REQ-2</span>
+            Requirement Title #2
+            
+          </a>
+        </li>
+      </ul>
+    </sdoc-node-field>
+      
+      <sdoc-node-field-label>RELATIONS (File):</sdoc-node-field-label>
+      <sdoc-node-field data-field-label="file relations">
+        <ul class="requirement__link">
+              <li>
+                <a data-turbo="false" class="requirement__link-file" href="../_source_files/tests/subfolder/file3.c.html#TEST_DOC/tests/subfolder/file3.c/test_case_2#22#39">
+                  tests/subfolder/file3.c, <i>lines: 22-39</i>, function test_case_2()
+                </a>
+              </li></ul>
+      </sdoc-node-field>
+    </sdoc-scope>
+    
+    <sdoc-scope class="node_fields_group-primary">
+      
+      
+      
+
+
+
+      
+
+
+
+  
+    <sdoc-node-field-label>INTENTION:</sdoc-node-field-label>
+    <sdoc-node-field
+      data-field-label="INTENTION"
+    >
+
+<sdoc-autogen><div class="document">
+<p>Intention...</p>
+</div>
+</sdoc-autogen></sdoc-node-field>
+    <sdoc-node-field-label>INPUT:</sdoc-node-field-label>
+    <sdoc-node-field
+      data-field-label="INPUT"
+    >
+
+<sdoc-autogen><div class="document">
+<p>This
+is
+a statement</p>
+<p>And this is the same statement's another paragraph.</p>
+</div>
+</sdoc-autogen></sdoc-node-field>
+    <sdoc-node-field-label>EXPECTED_RESULTS:</sdoc-node-field-label>
+    <sdoc-node-field
+      data-field-label="EXPECTED_RESULTS"
+    >
+
+<sdoc-autogen><div class="document">
+<p>This is a comment.</p>
+</div>
+</sdoc-autogen></sdoc-node-field>
+    </sdoc-scope>
+    
+  
+
+</sdoc-node-content>
+
+
+  </sdoc-node></div>
+          </div>
+        </div>
+      
+
+      <div data-line="22" class="source__line">
+        <div data-line="22" id="line-22" class="source__line-number"><pre>22</pre></div>
+        <div data-line="22" class="source__line-content">
+            <pre class="highlight"><span class="cm">/**</span></pre></div>
+      </div>
+
+      <div data-line="23" class="source__line">
+        <div data-line="23" id="line-23" class="source__line-number"><pre>23</pre></div>
+        <div data-line="23" class="source__line-content">
+            <pre class="highlight"><span class="cm"> * Some text.</span></pre></div>
+      </div>
+
+      <div data-line="24" class="source__line">
+        <div data-line="24" id="line-24" class="source__line-number"><pre>24</pre></div>
+        <div data-line="24" class="source__line-content">
+            <pre class="highlight"><span class="cm"> *</span></pre></div>
+      </div>
+
+      <div data-line="25" class="source__line">
+        <div data-line="25" id="line-25" class="source__line-number"><pre>25</pre></div>
+        <div data-line="25" class="source__line-content">
+            <pre class="highlight"><span class="cm"> * @relation(REQ-2, scope=function)</span></pre></div>
+      </div>
+
+      <div data-line="26" class="source__line">
+        <div data-line="26" id="line-26" class="source__line-number"><pre>26</pre></div>
+        <div data-line="26" class="source__line-content">
+            <pre class="highlight"><span class="cm"> *</span></pre></div>
+      </div>
+
+      <div data-line="27" class="source__line">
+        <div data-line="27" id="line-27" class="source__line-number"><pre>27</pre></div>
+        <div data-line="27" class="source__line-content">
+            <pre class="highlight"><span class="cm"> * INTENTION: Intention...</span></pre></div>
+      </div>
+
+      <div data-line="28" class="source__line">
+        <div data-line="28" id="line-28" class="source__line-number"><pre>28</pre></div>
+        <div data-line="28" class="source__line-content">
+            <pre class="highlight"><span class="cm"> *</span></pre></div>
+      </div>
+
+      <div data-line="29" class="source__line">
+        <div data-line="29" id="line-29" class="source__line-number"><pre>29</pre></div>
+        <div data-line="29" class="source__line-content">
+            <pre class="highlight"><span class="cm"> * INPUT: This</span></pre></div>
+      </div>
+
+      <div data-line="30" class="source__line">
+        <div data-line="30" id="line-30" class="source__line-number"><pre>30</pre></div>
+        <div data-line="30" class="source__line-content">
+            <pre class="highlight"><span class="cm"> *        is</span></pre></div>
+      </div>
+
+      <div data-line="31" class="source__line">
+        <div data-line="31" id="line-31" class="source__line-number"><pre>31</pre></div>
+        <div data-line="31" class="source__line-content">
+            <pre class="highlight"><span class="cm"> *        a statement</span></pre></div>
+      </div>
+
+      <div data-line="32" class="source__line">
+        <div data-line="32" id="line-32" class="source__line-number"><pre>32</pre></div>
+        <div data-line="32" class="source__line-content">
+            <pre class="highlight"><span class="cm"> *        \n\n</span></pre></div>
+      </div>
+
+      <div data-line="33" class="source__line">
+        <div data-line="33" id="line-33" class="source__line-number"><pre>33</pre></div>
+        <div data-line="33" class="source__line-content">
+            <pre class="highlight"><span class="cm"> *        And this is the same statement&#39;s another paragraph.</span></pre></div>
+      </div>
+
+      <div data-line="34" class="source__line">
+        <div data-line="34" id="line-34" class="source__line-number"><pre>34</pre></div>
+        <div data-line="34" class="source__line-content">
+            <pre class="highlight"><span class="cm"> *</span></pre></div>
+      </div>
+
+      <div data-line="35" class="source__line">
+        <div data-line="35" id="line-35" class="source__line-number"><pre>35</pre></div>
+        <div data-line="35" class="source__line-content">
+            <pre class="highlight"><span class="cm"> * EXPECTED_RESULTS: This is a comment.</span></pre></div>
+      </div>
+
+      <div data-line="36" class="source__line">
+        <div data-line="36" id="line-36" class="source__line-number"><pre>36</pre></div>
+        <div data-line="36" class="source__line-content">
+            <pre class="highlight"><span class="cm"> */</span></pre></div>
+      </div>
+
+      <div data-line="37" class="source__line">
+        <div data-line="37" id="line-37" class="source__line-number"><pre>37</pre></div>
+        <div data-line="37" class="source__line-content">
+            <pre class="highlight"><span class="kt">void</span><span class="w"> </span><span class="nf">test_case_2</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></pre></div>
+      </div>
+
+      <div data-line="38" class="source__line">
+        <div data-line="38" id="line-38" class="source__line-number"><pre>38</pre></div>
+        <div data-line="38" class="source__line-content">
+            <pre class="highlight"><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;hello world</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span></pre></div>
+      </div>
+
+      <div data-line="39" class="source__line">
+        <div data-line="39" id="line-39" class="source__line-number"><pre>39</pre></div>
+        <div data-line="39" class="source__line-content">
+            <pre class="highlight"><span class="p">}</span></pre></div>
+      </div>
+        <div
+          class="source__range-closer"
+          data-end="39"
+        >
+          <div class="source__range-closer-label">
+
+<a
+  class="source__range-pointer action_button"
+  data-begin="22"
+  data-end="39"
+  href="../../../_source_files/tests/subfolder/file3.c.html##22#39"
+  title="Click to toggle range (Ctrl/Cmd + Click with focus)"
+><span class="source__range-definition">22 - 39 | function test_case_2()</span></a></div>
+        </div>
+      </div></div>
+</div>
+
+    </main>
+
+    <footer class="layout_footer">
+      <div class="footer">
+        Built with
+        <a
+          class="strictdoc__link"
+          href="https://github.com/strictdoc-project/strictdoc"
+          target="_blank"
+        >StrictDoc</a>
+        <a
+          class="strictdoc__version"
+          href="https://github.com/strictdoc-project/strictdoc/releases/tag/0.14.1a3"
+          target="_blank"
+        >
+          <svg height="16" viewBox="0 0 16 16" version="1.1" width="16" >
+            <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"/>
+          </svg>
+          0.14.1a3
+        </a>
+      </div>
+    </footer>
+
+    <aside class="layout_aside">
+      
+    </aside>
+
+  </div>
+  
+  <div id="modal"></div>
+  <div id="confirm"></div>
+  
+
+</body>
+</html>

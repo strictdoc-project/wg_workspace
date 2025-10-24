@@ -1,0 +1,94 @@
+[DOCUMENT]
+MID: 8a87daf19a7c487f89f396406a974509
+TITLE: StrictDoc Requirements Specification (L2)
+VERSION: Git commit: @GIT_VERSION, Git branch: @GIT_BRANCH
+DATE: @GIT_COMMIT_DATETIME
+PREFIX: SDOC-SRS-
+OPTIONS:
+  ENABLE_MID: True
+
+[GRAMMAR]
+ELEMENTS:
+- TAG: SECTION
+  PROPERTIES:
+    IS_COMPOSITE: True
+    VIEW_STYLE: Narrative
+  FIELDS:
+  - TITLE: MID
+    TYPE: String
+    REQUIRED: False
+  - TITLE: UID
+    TYPE: String
+    REQUIRED: False
+  - TITLE: TITLE
+    TYPE: String
+    REQUIRED: True
+- TAG: TEXT
+  FIELDS:
+  - TITLE: MID
+    TYPE: String
+    REQUIRED: True
+  - TITLE: UID
+    TYPE: String
+    REQUIRED: False
+  - TITLE: STATEMENT
+    TYPE: String
+    REQUIRED: False
+- TAG: REQUIREMENT
+  PROPERTIES:
+    VIEW_STYLE: Table
+  FIELDS:
+  - TITLE: MID
+    TYPE: String
+    REQUIRED: False
+  - TITLE: UID
+    TYPE: String
+    REQUIRED: False
+  - TITLE: STATUS
+    TYPE: String
+    REQUIRED: False
+  - TITLE: TITLE
+    TYPE: String
+    REQUIRED: False
+  - TITLE: STATEMENT
+    TYPE: String
+    REQUIRED: False
+  - TITLE: RATIONALE
+    TYPE: String
+    REQUIRED: False
+  - TITLE: COMMENT
+    TYPE: String
+    REQUIRED: False
+  RELATIONS:
+  - TYPE: Parent
+  - TYPE: File
+
+[[BUNDLE]]
+MID: 34b4abc6bb4649de9e56af31c229b0d1
+UID: SECTION-SRS-Graph-database
+TITLE: Graph database
+
+[REQUIREMENT]
+MID: 8330d61fd5b1438fa90f127f88903a0d
+UID: SDOC-SRS-30
+STATUS: Active
+TITLE: Detect links cycles
+STATEMENT: >>>
+The Traceability Index shall detect cycles between requirements.
+<<<
+
+[REQUIREMENT]
+MID: 8330d61fd5b1438fa90f127f88903a0d
+UID: SDOC-SRS-30
+STATUS: Active
+TITLE: Detect links cycles
+STATEMENT: >>>
+The Traceability Index shall detect cycles between requirements.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: SDOC-SSS-47
+- TYPE: Parent
+  VALUE: SDOC-SSS-94
+
+[[/BUNDLE]]
