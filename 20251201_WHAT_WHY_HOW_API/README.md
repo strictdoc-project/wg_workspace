@@ -20,8 +20,8 @@ This document proposes the following changes:
 The single `SPDX-Req-Text` field currently contains different types of
 information mixed together. We propose dividing it into several fields. These
 fields would capture four different aspects: WHAT (the requirement statement),
-WHY (the rationale or justification), HOW (design or implementation
-considerations), API (the interface description).
+WHY (the rationale or justification), HOW (implementation details), API (the
+interface description).
 
 This separation ensures that each aspect is expressed clearly, reduces mixing of
 concepts, and supports more consistent documentation across the codebase. It
@@ -32,17 +32,21 @@ below.
 
 2. **Optional: Store all requirement content inside the source comment**
 
-If WHAT/WHY/HOW/API are clearly separated:
+If WHAT/WHY/HOW/API are clearly separated, it becomes possible to reduce or
+remove the need for sidecar files. All requirement content can be stored
+directly inside the function's comment block. This simplifies the workflow by
+removing the need to mirror the sidecar file structure, while still preserving
+clarity and traceability.
 
-- It becomes possible to reduce or remove the need for sidecar files. All
-  requirement content can be stored directly inside the function's comment
-  block. This simplifies the workflow by removing the need to mirror the sidecar
-  file structure, while still preserving clarity and traceability.
+The less textual or less narrative information can be stored in the end of the
+comment block. A developer can quickly locate the required aspect by searching
+for its field name, knowing that the more "noisy" meta-information is placed at
+the bottom of the comment.
 
-- It also becomes possible to place the less textual or less narrative
-  information toward the end of the comment block. A developer can quickly
-  locate the required aspect by searching for its field name, knowing that the
-  more "noisy" meta-information is placed at the bottom of the comment.
+This optional part of the proposal does not remove the possibility of storing
+high-level requirements (HLRs) in sidecar files. With this split, a clear
+separation can be achieved: HLRs can be stored in sidecar files, and LLRs are
+stored in the source code.
 
 ## WHAT/WHY/HOW/API fields
 
@@ -59,14 +63,15 @@ This field contains the reason for the function's existence. A typical rationale
 explains how this function satisfies its parent requirement(s) referenced with
 `SPDX-Req-Ref`.
 
-The rationale may also explain why the function has its particular scope and
-interface.
-
 ### HOW (Implementation details)
 
-This field contains internal design and implementation details. It should
-include information that is important for developers working on the function.
-Less obvious design choices and potential pitfalls can be listed here.
+This field contains internal implementation details. It should include
+information that is important for developers working on this function. Less
+obvious design choices and potential pitfalls can be listed here.
+
+Information about the algorithms used, non-trivial implementation approaches,
+and "don't fix it — it is already fixed" notes, including tricky gotchas and
+implementation know-hows, is appropriate content for the HOW field.
 
 ### API (Interface description)
 
@@ -75,29 +80,60 @@ value, and possible side effects. It is similar to kernel-doc or Doxygen-style
 documentation, but without any functional behavior description. Functional
 behavior belongs to the WHAT field.
 
-## Fat WHAT vs lean API
+## Fat WHAT and lean API
 
-WHAT and API both describe externally visible aspects, but their roles are
-different:
+With the introduction of the WHAT information aspect, much of the information
+that was traditionally captured in the API field is now included in the "fat"
+WHAT. The "lean" API field then becomes a flattened description of the interface
+surface of a source code function, excluding any testable behavioral aspects.
+
+To clarify the difference, WHAT and API both describe externally visible
+aspects, but their roles are different:
 
 - WHAT describes the required functional behavior and the observable result that
   the function must provide.
-- API describes the interface through which callers use the function. This
-  includes how the function is called, which arguments it takes, how the return
-  value is handled, and any other interface-level details.
 
-In short: WHAT defines the required functional behavior. API defines the usage
-surface, that is, the contract between the function and its callers.
+- API describes the interface through which callers use the function. This
+  includes how the function is called, which arguments it takes, which values it
+  returns, and any other interface-level details, such as the description of
+  possible side effects.
+
+In short: WHAT defines the required functional behavior, while API defines the
+usage surface, that is, the contract between the function and its callers.
+
+In case of a conflict between WHAT and API, the rule of thumb is to consider the
+testability of the information. If an aspect is testable, it belongs in WHAT. If
+it is a detail that only describes the interface surface, it belongs in API.
+
+Example: A function accepts an argument in the range `[1, 20]` and returns an
+error if the provided value is outside this range. In this case, the API field
+specifies the allowed range for the argument, while the WHAT field contains a
+"shall" statement requiring the function to return an error for any out-of-range
+value.
+
+## HOW in source code vs HOW in RST
+
+The HOW field should contain implementation details that apply only to the
+specific function. If the information concerns other functions or describes
+relationships, interactions, or design aspects beyond the function itself, it
+should be placed in the existing RST/Sphinx documentation for design and
+architecture. The rule of thumb is simple: function-local details go into the
+source comment's HOW, while broader design information goes into RST/Sphinx.
 
 ## What is tested
 
 Automated tests are written only against the statements found in the WHAT field.
 
-The HOW, WHY, and API fields are NOT tested by automated tests.
+The HOW, WHY, and API fields are NOT tested by requirements-driven automated
+tests.
 
 This approach follows testing practices in several regulated industries, where
 requirements specifications are tested but interface documents (e.g., Interface
 Control Documents) are not.
+
+NOTE: It is possible that some whitebox testing methods go very deeply into
+implementation details. It remains to be discussed whether for such tests the
+WHAT fields must be extended with some implementation-specific behavior.
 
 ## Proposed order of the field declaration
 
@@ -119,8 +155,8 @@ is no additional content in the source comment.
 
 ## Why not conventional requirement field titles?
 
-The field WHAT is effectively a statement, WHY is a rationale, and HOW is
-implementation or design. The API field could also be named interface. A natural
+The field WHAT is effectively a statement, WHY is a rationale, and HOW is the
+implementation details. The API field could also be named interface. A natural
 question is why these fields are not named directly in this way.
 
 The answer in this proposal is that the terms WHAT, WHY, HOW, and API are closer
@@ -132,6 +168,16 @@ If required by tools that process requirements, these field names can be easily
 mapped to formal categories such as statements or rationales. However, using
 these formal names directly is seen as too redundant and too heavy for the
 everyday workflow of software developers.
+
+## Open questions
+
+### High-level requirements (HLRs) vs low-level requirements (LLRs)
+
+The focus of the Linux Kernel Requirements Template is on low-level requirements
+that are located next to, or close to, the source code functions.
+
+It is not clear whether HLRs should also use the WHAT/WHY or STATEMENT/RATIONALE
+fields. What is clear is that HLRs do not need the HOW or API fields.
 
 ## Examples
 
